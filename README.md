@@ -102,7 +102,7 @@ Due to the ICMP error response message about port 53, it is highly likely that t
 **Note: This is an educational simulation designed to demonstrate DoS attack analysis skills**
 
 ### Scenario
-A travel agency's website experienced service disruption when employees reported connection timeout errors. As a security analyst, I investigated unusual network traffic patterns to identify a potential DoS attack targeting the company's web server.
+A travel agency's website experienced service disruption when employees reported connection timeout errors. As a security analyst, I investigated unusual network traffic patterns using Wireshark to identify the cause of the service interruption.
 
 ### Network Traffic Analysis
 
@@ -132,7 +132,7 @@ The malicious actor (203.0.113.0) sent continuous SYN packets without completing
 
 ### Section 1: Attack Identification
 
-**One potential explanation for the website's connection timeout error message is:** A SYN flood Denial of Service (DoS) attack targeting the web server's TCP connection handling capacity.
+**One potential explanation for the website's connection timeout error message is:** A DoS attack. The logs show that the web server stops responding after it is overloaded with SYN packet requests. This event could be a type of DoS attack called SYN flooding.
 
 **The logs show that:** A single IP address (203.0.113.0) sent an abnormally high volume of TCP SYN requests to port 443 without completing the three-way handshake process.
 
@@ -141,10 +141,26 @@ The malicious actor (203.0.113.0) sent continuous SYN packets without completing
 ### Section 2: Attack Impact Analysis
 
 **TCP Three-Way Handshake Process:**
-1. **SYN:** Client initiates connection by sending synchronization packet to server
-2. **SYN-ACK:** Server responds with synchronization-acknowledgment, reserving system resources
-3. **ACK:** Client sends acknowledgment to complete connection establishment
+When website visitors try to establish a connection with the web server, a three-way handshake occurs using the TCP protocol. The handshake consists of three steps:
 
+1. **SYN packet** is sent from the source to the destination, requesting to connect.
+
+2. **SYN-ACK packet** - The destination replies to the source with a SYN-ACK packet to accept the connection request. The destination will reserve resources for the source to connect.
+
+3. **ACK packet** - A final ACK packet is sent from the source to the destination acknowledging the permission to connect.
+
+**Attack Mechanism:**
+In the case of a SYN flood attack, a malicious actor will send a large number of SYN packets all at once, which overwhelms the server's available resources to reserve for the connection. When this happens, there are no server resources left for legitimate TCP connection requests.
+
+**Impact Analysis:**
+The logs indicate that the web server has become overwhelmed and is unable to process the visitors' SYN requests. The server is unable to open a new connection to new visitors who receive a connection timeout message.
+
+**Evidence from Traffic Analysis:**
+- Source IP 203.0.113.0 sending excessive SYN requests to port 443
+- Web server initially responding normally, then becoming overwhelmed
+- Legitimate employee connections failing with timeout errors
+- Server eventually stops responding to all connection attempts
+  
 **What happens when a malicious actor sends a large number of SYN packets:**
 The server allocates resources for each SYN request, expecting to receive corresponding ACK packets. When the attacker sends only SYN packets without completing handshakes, the server's connection table fills up with half-open connections, exhausting available resources for legitimate traffic.
 
