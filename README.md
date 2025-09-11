@@ -99,7 +99,7 @@ Due to the ICMP error response message about port 53, it is highly likely that t
 
 
 ## Case Study 2: SYN Flood DoS Attack Analysis
-**Educational Exercise - TCP/HTTP Traffic Analysis**
+**Note: This is an educational simulation designed to demonstrate DoS attack analysis skills**
 
 ### Scenario
 A travel agency's website experienced service disruption when employees reported connection timeout errors. As a security analyst, I investigated unusual network traffic patterns to identify a potential DoS attack targeting the company's web server.
