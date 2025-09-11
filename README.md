@@ -36,7 +36,7 @@ This showcases cybersecurity incident response and network traffic analysis skil
 ## Case Study 1: DNS Server Failure Investigation
 **Note: This is an educational simulation designed to demonstrate network analysis skills**
 
-### Scenario
+Scenario
 Multiple customers reported inability to access www.yummyrecipesforme.com, receiving "destination port unreachable" errors. As a cybersecurity analyst, I investigated the network traffic to identify the root cause of this service disruption.
 
 <details>
@@ -56,7 +56,7 @@ udp port 53 unreachable length 150
 
 </details>
 
-### Technical Analysis
+Technical Analysis
 **Key Findings:**
 - **UDP Protocol:** Used for DNS queries from browser to DNS server
 - **ICMP Protocol:** Used for error message responses from DNS server
@@ -76,10 +76,10 @@ udp port 53 unreachable length 150
 ## Case Study 2: SYN Flood DoS Attack Analysis
 **Note: This is an educational simulation designed to demonstrate DoS attack analysis skills**
 
-### Network Traffic Analysis
+Network Traffic Analysis
 A travel agency's website experienced service disruption when employees reported connection timeout errors. I investigated unusual network traffic patterns using Wireshark to identify the cause.
 
-### Technical Analysis
+Technical Analysis
 **Attack Pattern:** SYN Flood DoS Attack
 
 **Key Evidence:**
@@ -87,7 +87,7 @@ A travel agency's website experienced service disruption when employees reported
 - Web server overwhelmed by abnormal traffic volume
 - Legitimate connections failing with timeout errors
 
-### Incident Report: SYN Flood DoS Attack
+Incident Report: SYN Flood DoS Attack
 
 **Section 1: Attack Identification**
 A DoS attack caused the connection timeout errors. The logs show the web server stopped responding after being overloaded with SYN packet requests - characteristic of SYN flooding.
