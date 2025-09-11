@@ -76,7 +76,7 @@ udp port 53 unreachable length 150
 ## Case Study 2: SYN Flood DoS Attack Analysis
 **Note: This is an educational simulation designed to demonstrate DoS attack analysis skills**
 
-### Technical Analysis
+### Network Traffic Analysis
 A travel agency's website experienced service disruption when employees reported connection timeout errors. I investigated unusual network traffic patterns using Wireshark to identify the cause.
 
 ### Technical Analysis
