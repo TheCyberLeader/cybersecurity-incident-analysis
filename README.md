@@ -1,18 +1,20 @@
 # Cybersecurity Incident Analysis 📓
 
 ## Overview
-This repository showcases cybersecurity incident response and network traffic analysis skills through detailed case studies. Each analysis demonstrates practical application of network protocol knowledge, threat detection, and professional incident documentation.
+This showcases cybersecurity incident response and network traffic analysis skills through **educational case studies and simulated scenarios**. Each analysis demonstrates practical application of network protocol knowledge, threat detection, and professional incident documentation.
 
 ## Skills Demonstrated
-- Network traffic analysis using tcpdump
+- Network traffic analysis using tcpdump and Wireshark
 - DNS and ICMP protocol troubleshooting
+- DoS/DDoS attack identification and analysis
+- TCP SYN flood attack investigation
 - Incident response documentation
 - Root cause analysis
 - Network security assessment
 
 ---
 
-## Case Study: DNS Server Failure Investigation
+## Case Study 1: DNS Server Failure Investigation
 **Note: This is an educational simulation designed to demonstrate network analysis skills**
 
 ### Scenario
@@ -48,7 +50,7 @@ udp port 53 unreachable length 150
 
 ---
 
-## Incident Report
+## Incident Report: DNS Server Failure Investigation
 
 ### Part 1: Problem Summary
 
@@ -95,27 +97,139 @@ Due to the ICMP error response message about port 53, it is highly likely that t
 
 ---
 
-## Technical Skills Demonstrated
 
-**Network Analysis:**
-- TCP/IP model layer analysis (Network and Transport layers)
-- Protocol identification and behavior analysis
-- Network troubleshooting using command-line tools
+## Case Study 2: SYN Flood DoS Attack Analysis
+**Educational Exercise - TCP/HTTP Traffic Analysis**
 
-**Incident Response:**
-- Systematic investigation methodology
-- Professional documentation of findings
-- Risk assessment and prioritization
+### Scenario
+A travel agency's website experienced service disruption when employees reported connection timeout errors. As a security analyst, I investigated unusual network traffic patterns to identify a potential DoS attack targeting the company's web server.
 
-**Security Assessment:**
-- Attack vector identification (DoS possibilities)
-- Service availability impact analysis
-- Infrastructure vulnerability assessment
+### Network Traffic Analysis
+
+**Attack Pattern Identified:**
+Based on Wireshark log analysis, the incident shows characteristics of a **SYN Flood DoS Attack**.
+
+**Key Evidence:**
+- Large volume of TCP SYN requests from single IP address (203.0.113.0)
+- Web server overwhelmed by abnormal traffic volume
+- Legitimate employee connections failing with timeout errors
+- [RST, ACK] packets indicating connection resets
+- HTTP/1.1 504 Gateway timeout errors
+
+### Technical Analysis
+
+**TCP Three-Way Handshake Process:**
+1. **SYN:** Client sends synchronization request to server
+2. **SYN-ACK:** Server acknowledges and reserves resources for connection
+3. **ACK:** Client confirms connection establishment
+
+**Attack Mechanism:**
+The malicious actor (203.0.113.0) sent continuous SYN packets without completing the handshake, causing the server to exhaust available connection resources while waiting for ACK responses that never arrived.
 
 ---
 
-## Professional Impact
+## Incident Report: SYN Flood DoS Attack
 
-This analysis demonstrates the ability to identify and diagnose network service failures quickly, providing actionable intelligence for incident response teams. The systematic approach to packet analysis and clear documentation enables rapid escalation and resolution of critical infrastructure issues.
+### Section 1: Attack Identification
 
-The investigation methodology presented here adheres to industry-standard practices for network security analysis and incident documentation.
+**One potential explanation for the website's connection timeout error message is:** A SYN flood Denial of Service (DoS) attack targeting the web server's TCP connection handling capacity.
+
+**The logs show that:** A single IP address (203.0.113.0) sent an abnormally high volume of TCP SYN requests to port 443 without completing the three-way handshake process.
+
+**This event could be:** A direct DoS attack aimed at overwhelming server resources and preventing legitimate users from accessing the website.
+
+### Section 2: Attack Impact Analysis
+
+**TCP Three-Way Handshake Process:**
+1. **SYN:** Client initiates connection by sending synchronization packet to server
+2. **SYN-ACK:** Server responds with synchronization-acknowledgment, reserving system resources
+3. **ACK:** Client sends acknowledgment to complete connection establishment
+
+**What happens when a malicious actor sends a large number of SYN packets:**
+The server allocates resources for each SYN request, expecting to receive corresponding ACK packets. When the attacker sends only SYN packets without completing handshakes, the server's connection table fills up with half-open connections, exhausting available resources for legitimate traffic.
+
+**Log analysis indicates:**
+- Initial normal traffic between employees and web server
+- Gradual increase in SYN requests from attacker IP
+- Progressive degradation of legitimate connections
+- Complete service failure as server resources became exhausted
+- Error messages including "504 Gateway Timeout" and [RST, ACK] connection resets
+
+**Impact on server performance:**
+The attack prevented legitimate employees from accessing sales webpages, disrupting business operations and potentially affecting customer service capabilities.
+
+---
+
+## Immediate Response Actions Taken
+
+**Mitigation Steps:**
+1. **Server Recovery:** Temporarily took web server offline to clear connection table
+2. **IP Blocking:** Configured firewall to block malicious IP address (203.0.113.0)
+3. **Traffic Monitoring:** Continued packet capture to monitor for attack evolution
+
+**Limitations of Current Solution:**
+IP blocking provides only temporary protection as attackers can easily spoof different source addresses to bypass firewall rules.
+
+**Recommended Long-term Security Measures:**
+- Implement SYN flood protection mechanisms (SYN cookies, rate limiting)
+- Deploy DDoS mitigation services
+- Configure intrusion detection systems for early attack detection
+- Establish incident response procedures for rapid attack mitigation
+
+## Technical Skills Demonstrated Across Case Studies
+
+**Network Protocol Analysis:**
+- DNS/ICMP troubleshooting and error interpretation
+- TCP three-way handshake analysis and connection state monitoring
+- UDP communication pattern analysis
+- HTTP/HTTPS traffic examination
+
+**Traffic Analysis Tools:**
+- tcpdump packet capture and log interpretation
+- Wireshark network protocol analysis
+- Network performance metrics assessment
+- Pattern recognition in network behavior
+
+**Attack Detection & Classification:**
+- DoS/DDoS attack identification
+- SYN flood attack pattern recognition
+- DNS service failure analysis
+- Network anomaly detection
+
+**Incident Response:**
+- Systematic investigation methodology
+- Emergency mitigation implementation
+- Professional incident documentation
+- Risk assessment and impact analysis
+- Security control deployment
+
+**Technical Communication:**
+- Professional report writing for technical and management audiences
+- Clear documentation of complex network issues
+- Actionable recommendations for security improvements
+- Evidence-based root cause analysis
+
+---
+
+## Key Learning Outcomes & Professional Impact
+
+**Analytical Capabilities:**
+These case studies demonstrate the ability to quickly diagnose different types of network failures and security incidents using systematic approaches. The investigations showcase competency in moving from symptom identification to root cause analysis within professional timeframes.
+
+**Technical Proficiency:**
+The exercises illustrate practical application of network security concepts across multiple protocol layers (Network, Transport, Application) and different attack vectors. This includes both passive monitoring scenarios (DNS failure) and active attack situations (DoS).
+
+**Professional Readiness:**
+The documentation standards and investigation methodologies reflect industry expectations for cybersecurity analysts. Each case study follows structured incident response procedures and produces actionable intelligence for security teams.
+
+**Problem-Solving Approach:**
+Both scenarios demonstrate the ability to:
+- Rapidly assess network issues using appropriate diagnostic tools
+- Differentiate between infrastructure failures and malicious activities
+- Implement immediate protective measures while planning long-term solutions
+- Communicate technical findings clearly to different stakeholder groups
+
+**Business Impact Understanding:**
+The analyses show awareness of how technical issues affect organizational operations, from customer-facing website availability to employee productivity, demonstrating the ability to prioritize security responses based on business impact.
+
+These educational exercises collectively showcase the analytical thinking, technical competency, and professional communication skills essential for cybersecurity incident response roles.
