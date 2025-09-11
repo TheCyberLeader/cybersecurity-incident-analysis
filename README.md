@@ -13,6 +13,7 @@ This repository showcases cybersecurity incident response and network traffic an
 ---
 
 ## Case Study: DNS Server Failure Investigation
+**Note: This is an educational simulation designed to demonstrate network analysis skills**
 
 ### Scenario
 Multiple customers reported inability to access www.yummyrecipesforme.com, receiving "destination port unreachable" errors. As a cybersecurity analyst, I investigated the network traffic to identify the root cause of this service disruption.
