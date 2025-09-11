@@ -1,7 +1,7 @@
 # Cybersecurity Incident Analysis 📓
 
 ## Overview
-This repository showcases cybersecurity incident response and network traffic analysis skills through detailed case studies. Each analysis demonstrates practical application of network protocol knowledge, threat detection, and professional incident documentation.
+This showcases cybersecurity incident response and network traffic analysis skills through detailed case studies. Each analysis demonstrates practical application of network protocol knowledge, threat detection, and professional incident documentation.
 
 ## Skills Demonstrated
 - Network traffic analysis using tcpdump
