@@ -4,7 +4,6 @@
 - [Overview](#overview)
 - [Skills Demonstrated](#skills-demonstrated)
 - [Case Study 1: DNS Server Failure Investigation](#case-study-1-dns-server-failure-investigation)
-  - [Incident Report: DNS Server Failure](#incident-report-dns-server-failure-investigation)
 - [Case Study 2: SYN Flood DoS Attack Analysis](#case-study-2-syn-flood-dos-attack-analysis)
   - [Incident Report: SYN Flood DoS Attack](#incident-report-syn-flood-dos-attack)
   - [Response Actions](#immediate-response-actions-taken)
