@@ -11,7 +11,7 @@
   - [Security Incident Report](#security-incident-report-brute-force-attack--malware-distribution)
 - [Case Study 4: Network Security Risk Assessment & Hardening](#case-study-4-network-security-risk-assessment--hardening)
   - [Security Risk Assessment Report](#security-risk-assessment-report)
-[Case Study 5: NIST Cybersecurity Framework Incident Response](#case-study-5-nist-cybersecurity-framework-incident-response)
+- [Case Study 5: NIST Cybersecurity Framework Incident Response](#case-study-5-nist-cybersecurity-framework-incident-response)
   - [Scenario](#scenario-4)
   - [NIST CSF Framework Analysis](#nist-csf-framework-analysis)
 - [Technical Skills Summary](#technical-skills-demonstrated-across-case-studies)
