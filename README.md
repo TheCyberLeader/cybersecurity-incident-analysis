@@ -10,7 +10,6 @@
 - [Case Study 3: Brute Force Attack & Malware Distribution](#case-study-3-brute-force-attack--malware-distribution)
   - [Security Incident Report](#security-incident-report-brute-force-attack--malware-distribution)
 - [Case Study 4: Network Security Risk Assessment & Hardening](#case-study-4-network-security-risk-assessment--hardening)
-  - [Scenario](#scenario-3)
   - [Security Risk Assessment Report](#security-risk-assessment-report)
 - [Technical Skills Summary](#technical-skills-demonstrated-across-case-studies)
 - [Professional Impact](#key-learning-outcomes--professional-impact)
