@@ -11,6 +11,9 @@
   - [Security Incident Report](#security-incident-report-brute-force-attack--malware-distribution)
 - [Case Study 4: Network Security Risk Assessment & Hardening](#case-study-4-network-security-risk-assessment--hardening)
   - [Security Risk Assessment Report](#security-risk-assessment-report)
+[Case Study 5: NIST Cybersecurity Framework Incident Response](#case-study-5-nist-cybersecurity-framework-incident-response)
+  - [Scenario](#scenario-4)
+  - [NIST CSF Framework Analysis](#nist-csf-framework-analysis)
 - [Technical Skills Summary](#technical-skills-demonstrated-across-case-studies)
 - [Professional Impact](#key-learning-outcomes--professional-impact)
 
@@ -28,6 +31,15 @@ This showcases cybersecurity incident response and network traffic analysis skil
 - Malware analysis and distribution tracking
 - JavaScript code injection identification
 - Multi-stage attack reconstruction
+- Vulnerability assessment and risk analysis
+- Network hardening strategy development
+- Security policy implementation
+- Preventive security controls design
+- NIST Cybersecurity Framework application
+- Structured incident response methodology
+- Business continuity planning
+- Risk-based decision making
+- Cross-functional incident coordination
 - Incident response documentation
 - Root cause analysis
 - Network security assessment
@@ -224,6 +236,31 @@ Regular firewall maintenance ensures rules reflect current security standards fo
 
 [🔝 Back to Top](#table-of-contents)
 
+## Case Study 5: NIST Cybersecurity Framework Incident Response
+**Note: This is an educational simulation designed to demonstrate NIST CSF framework application skills**
+
+### Scenario
+A company experienced a complete network service outage when all systems stopped responding. As part of the cybersecurity team, I applied the NIST Cybersecurity Framework to systematically analyze, respond to, and recover from the incident.
+
+### NIST CSF Framework Analysis
+
+| **Framework Component** | **Analysis & Actions** |
+|---|---|
+| **Identify** | A malicious actor targeted the company with an ICMP flood attack. The entire internal network was affected. All critical network resources needed to be secured and restored to a functioning state. |
+| **Protect** | Implemented new firewall rule to limit incoming ICMP packet rates and deployed IDS/IPS system to filter ICMP traffic based on suspicious characteristics. |
+| **Detect** | Configured source IP address verification on firewall to check for spoofed IP addresses on incoming ICMP packets and implemented network monitoring software to detect abnormal traffic patterns. |
+| **Respond** | Established procedures to isolate affected systems, restore critical services, analyze network logs for suspicious activity, and report incidents to upper management and legal authorities when applicable. |
+| **Recover** | Restored network services by blocking external ICMP floods at firewall, stopping non-critical services to reduce internal traffic, prioritizing critical service restoration, and bringing non-critical systems online after attack subsided. |
+
+### Incident Summary
+The company experienced a security event when all network services suddenly stopped responding. The cybersecurity team found the disruption was caused by a distributed denial of services (DDoS) attack through a flood of incoming ICMP packets. The team responded by blocking the attack and stopping all non-critical network services, so that critical network services could be restored.
+
+### Key Framework Applications
+- **Systematic Response:** Applied structured NIST methodology for comprehensive incident handling
+- **Risk Prioritization:** Identified critical vs. non-critical systems for recovery sequencing
+- **Preventive Controls:** Implemented multiple protection layers (firewall rules, IDS/IPS)
+- **Continuous Monitoring:** Established ongoing detection capabilities for future threats
+- **Business Continuity:** Maintained focus on restoring operations while securing infrastructure
 ---
 
 ## Technical Skills Demonstrated Across Case Studies
@@ -232,29 +269,33 @@ Regular firewall maintenance ensures rules reflect current security standards fo
 |---|---|
 | **Protocol Analysis** | DNS/ICMP troubleshooting, TCP handshake analysis, UDP communication patterns, HTTP traffic examination |
 | **Traffic Analysis Tools** | tcpdump packet capture, Wireshark analysis, pattern recognition, sandbox testing |
-| **Attack Detection** | DoS/DDoS identification, SYN flood recognition, DNS failure analysis, brute force detection, malware distribution tracking |
+| **Attack Detection** | DoS/DDoS identification, SYN flood recognition, DNS failure analysis, brute force detection, malware distribution tracking, ICMP flood analysis |
 | **Vulnerability Assessment** | Risk analysis and prioritization, security gap identification, multi-layered threat evaluation |
 | **Network Hardening** | Preventive security controls, policy development, firewall configuration, access control implementation |
-| **Incident Response** | Systematic investigation, emergency mitigation, professional documentation, multi-stage attack reconstruction |
+| **Framework Implementation** | NIST Cybersecurity Framework application, structured incident response methodology, business continuity planning |
+| **Incident Response** | Systematic investigation, emergency mitigation, professional documentation, multi-stage attack reconstruction, cross-functional coordination |
 | **Technical Communication** | Professional reporting, actionable recommendations, evidence-based analysis, stakeholder communication |
 
 ## Key Learning Outcomes & Professional Impact
 
 **Core Competencies Demonstrated:**
 - **Comprehensive Security Analysis:** Ability to identify, analyze, and respond to different types of security incidents across the entire attack lifecycle
-- **Technical Proficiency:** Practical application across multiple protocol layers and attack methodologies (infrastructure failures, DoS attacks, application-layer compromises, preventive hardening)
-- **Professional Documentation:** Industry-standard incident response procedures and comprehensive reporting across reactive and proactive security scenarios
-- **Business-Focused Security:** Understanding how technical issues affect operations and developing security strategies aligned with organizational needs
+- **Technical Proficiency:** Practical application across multiple protocol layers and attack methodologies 
+- **Framework Expertise:** Industry-standard incident response using NIST Cybersecurity Framework
+- **Strategic Security Thinking:** Understanding how technical issues affect operations and developing security strategies aligned with organizational needs
 
 **Cybersecurity Skillset Progression:**
-These four case studies demonstrate a complete cybersecurity analyst competency framework:
+These five case studies demonstrate a complete cybersecurity analyst competency framework:
 1. **Infrastructure Analysis:** Network service failures and protocol troubleshooting
 2. **Attack Detection & Response:** Real-time DoS attack identification and mitigation
 3. **Complex Incident Response:** Multi-vector attacks involving multiple stages and protocols
 4. **Proactive Security Strategy:** Vulnerability assessment and preventive hardening implementation
+5. **Framework-Based Response:** Structured incident response using industry standards
 
 **Professional Readiness:**
-This portfolio showcases the analytical thinking, technical competency, incident response capabilities, and strategic security planning skills essential for cybersecurity roles. The progression from reactive incident analysis to proactive security assessment demonstrates readiness for diverse cybersecurity challenges in enterprise environments.
+This portfolio showcases the analytical thinking, technical competency, incident response capabilities, framework implementation skills, and strategic security planning abilities essential for cybersecurity roles. The progression from reactive incident analysis to proactive security assessment and structured framework application demonstrates readiness for diverse cybersecurity challenges in enterprise environments.
+
+The combination of technical analysis skills with industry-standard frameworks positions this portfolio to meet the expectations of modern cybersecurity positions requiring both hands-on technical capabilities and structured business-focused incident response.
 
 [🔝 Back to Top](#table-of-contents)
 
