@@ -9,6 +9,8 @@
   - [Response Actions](#immediate-response-actions-taken)
 - [Case Study 3: Brute Force Attack & Malware Distribution](#case-study-3-brute-force-attack--malware-distribution)
   - [Security Incident Report](#security-incident-report-brute-force-attack--malware-distribution)
+ - [Case Study 4: Network Security Risk Assessment & Hardening](#case-study-4-network-security-risk-assessment--hardening)
+  - [Security Risk Assessment Report](#security-risk-assessment-report)
 - [Technical Skills Summary](#technical-skills-demonstrated-across-case-studies)
 - [Professional Impact](#key-learning-outcomes--professional-impact)
 
@@ -169,6 +171,57 @@ Investigation using a sandbox environment and tcpdump revealed:
 - Monitor and log administrative access attempts
 - Regular security code reviews to prevent malicious injections
 
+## Case Study 4: Network Security Risk Assessment & Hardening
+**Note: This is an educational simulation designed to demonstrate network hardening and vulnerability assessment skills**
+
+### Scenario
+A social media organization experienced a major data breach, compromising customer personal information. As a security analyst, I conducted a comprehensive network security assessment to identify vulnerabilities and develop recommendations for hardening to prevent future incidents.
+
+<details>
+<summary><strong>View Identified Vulnerabilities</strong></summary>
+
+**Critical Security Vulnerabilities:**
+1. Employees sharing passwords across systems
+2. Database admin password set to default credentials  
+3. Firewalls lacking traffic filtering rules
+4. No multi-factor authentication implementation
+
+</details>
+
+### Security Risk Assessment Report
+
+**Part 1: Selected Hardening Tools and Methods**
+
+Three hardening tools the organization can implement to address the vulnerabilities:
+
+1. **Implementing Multi-Factor Authentication (MFA)**
+2. **Setting and Enforcing Strong Password Policies** 
+3. **Performing Regular Firewall Maintenance**
+
+**Tool Descriptions:**
+- **MFA** requires users to verify credentials through multiple methods (fingerprint scans, ID cards, PIN numbers, passwords) before accessing applications
+- **Password policies** include rules for password length, acceptable characters, sharing restrictions, and account lockout after unsuccessful login attempts  
+- **Firewall maintenance** involves regularly checking and updating security configurations to stay ahead of potential threats
+
+**Part 2: Implementation Recommendations**
+
+**Multi-Factor Authentication Benefits:**
+MFA adds a security layer beyond passwords, reducing the likelihood of successful brute force attacks since multiple authentication methods are required. It also discourages password sharing since recipients would need additional authentication factors, making shared passwords less useful.
+
+**Password Policy Enforcement:**
+Strong password policies make it increasingly challenging for malicious actors to access the network. Account suspension after a certain number of failed login attempts prevents brute force attacks. Requirements for password complexity, frequent updates, and preventing password reuse help prevent network infiltration.
+
+**Firewall Maintenance Strategy:**
+Regular firewall maintenance ensures rules reflect current security standards for allowed/denied traffic. Suspicious traffic sources should be added to deny lists, and rules must be updated after security events. This protects against various DoS and DDoS attacks by controlling network access points.
+
+### Implementation Timeline & Frequency
+
+| Security Measure | Implementation Frequency | Priority Level |
+|---|---|---|
+| MFA Deployment | One-time setup, ongoing user management | High |
+| Password Policy Updates | Monthly review, immediate enforcement | High |
+| Firewall Rule Maintenance | Weekly reviews, immediate post-incident updates | Critical |
+
 [🔝 Back to Top](#table-of-contents)
 
 ---
@@ -180,24 +233,28 @@ Investigation using a sandbox environment and tcpdump revealed:
 | **Protocol Analysis** | DNS/ICMP troubleshooting, TCP handshake analysis, UDP communication patterns, HTTP traffic examination |
 | **Traffic Analysis Tools** | tcpdump packet capture, Wireshark analysis, pattern recognition, sandbox testing |
 | **Attack Detection** | DoS/DDoS identification, SYN flood recognition, DNS failure analysis, brute force detection, malware distribution tracking |
+| **Vulnerability Assessment** | Risk analysis and prioritization, security gap identification, multi-layered threat evaluation |
+| **Network Hardening** | Preventive security controls, policy development, firewall configuration, access control implementation |
 | **Incident Response** | Systematic investigation, emergency mitigation, professional documentation, multi-stage attack reconstruction |
 | **Technical Communication** | Professional reporting, actionable recommendations, evidence-based analysis, stakeholder communication |
 
 ## Key Learning Outcomes & Professional Impact
 
 **Core Competencies Demonstrated:**
-- **Rapid Diagnosis:** Ability to quickly identify different types of network failures and security incidents across multiple attack vectors
-- **Technical Proficiency:** Practical application across multiple protocol layers and attack methodologies (infrastructure failures, DoS attacks, application-layer compromises)
-- **Professional Documentation:** Industry-standard incident response procedures and comprehensive reporting
-- **Business Impact Awareness:** Understanding how technical issues affect operations, from DNS outages to malware distribution
+- **Comprehensive Security Analysis:** Ability to identify, analyze, and respond to different types of security incidents across the entire attack lifecycle
+- **Technical Proficiency:** Practical application across multiple protocol layers and attack methodologies (infrastructure failures, DoS attacks, application-layer compromises, preventive hardening)
+- **Professional Documentation:** Industry-standard incident response procedures and comprehensive reporting across reactive and proactive security scenarios
+- **Business-Focused Security:** Understanding how technical issues affect operations and developing security strategies aligned with organizational needs
 
-**Attack Analysis Progression:**
-These three case studies demonstrate increasing complexity in cybersecurity analysis:
+**Cybersecurity Skillset Progression:**
+These four case studies demonstrate a complete cybersecurity analyst competency framework:
 1. **Infrastructure Analysis:** Network service failures and protocol troubleshooting
-2. **Network Attack Detection:** Real-time DoS attack identification and mitigation
-3. **Multi-Vector Incident Response:** Complex attacks involving multiple stages and protocols
+2. **Attack Detection & Response:** Real-time DoS attack identification and mitigation
+3. **Complex Incident Response:** Multi-vector attacks involving multiple stages and protocols
+4. **Proactive Security Strategy:** Vulnerability assessment and preventive hardening implementation
 
-These educational exercises showcase the analytical thinking, technical competency, and professional communication skills essential for cybersecurity incident response roles, demonstrating readiness for real-world security challenges.
+**Professional Readiness:**
+This portfolio showcases the analytical thinking, technical competency, incident response capabilities, and strategic security planning skills essential for cybersecurity roles. The progression from reactive incident analysis to proactive security assessment demonstrates readiness for diverse cybersecurity challenges in enterprise environments.
 
 [🔝 Back to Top](#table-of-contents)
 
