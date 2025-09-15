@@ -11,8 +11,9 @@
   - [Security Incident Report](#security-incident-report-brute-force-attack--malware-distribution)
 - [Case Study 4: Network Security Risk Assessment & Hardening](#case-study-4-network-security-risk-assessment--hardening)
   - [Security Risk Assessment Report](#security-risk-assessment-report)
-- [Case Study 5: NIST Cybersecurity Framework Incident Response](#case-study-5-nist-cybersecurity-framework-incident-response)
+- [Case Study 5: NIST Cybersecurity Framework Implementation](#case-study-5-nist-cybersecurity-framework-implementation)
   - [NIST CSF Framework Analysis](#nist-csf-framework-analysis)
+  - [Strategic Security Improvements](#strategic-security-improvements)
 - [Technical Skills Summary](#technical-skills-demonstrated-across-case-studies)
 - [Professional Impact](#key-learning-outcomes--professional-impact)
 
@@ -49,7 +50,7 @@ This showcases cybersecurity incident response and network traffic analysis skil
 **Note: This is an educational simulation designed to demonstrate network analysis skills**
 
 ### Scenario
-Multiple customers reported inability to access www.yummyrecipesforme.com, receiving "destination port unreachable" errors. As a cybersecurity analyst, I investigated the network traffic to identify the root cause of this service disruption.
+Multiple customers reported an inability to access www.yummyrecipesforme.com, receiving "destination port unreachable" errors. As a cybersecurity analyst, I investigated the network traffic to identify the root cause of this service disruption.
 
 <details>
 <summary><strong>View tcpdump Log Data</strong></summary>
@@ -69,8 +70,8 @@ udp port 53 unreachable length 150
 
 ### Technical Analysis
 **Key Findings:**
-- **UDP Protocol:** Used for DNS queries from browser to DNS server
-- **ICMP Protocol:** Used for error message responses from DNS server
+- **UDP Protocol:** Used for DNS queries from the browser to the DNS server
+- **ICMP Protocol:** Used for error message responses from the DNS server
 - **Error Pattern:** Consistent "udp port 53 unreachable" across all attempts
 - **DNS Flags:** Query ID 35084+ with "A?" flag indicating DNS A record lookup
 
@@ -136,7 +137,7 @@ A former employee executed a brute force attack against yummyrecipesforme.com, g
 <details>
 <summary><strong>View Attack Timeline</strong></summary>
 
-1. **Initial Access:** Brute force attack using default admin password
+1. **Initial Access:** Brute force attack using the default admin password
 2. **Code Injection:** Malicious JavaScript embedded in website source code
 3. **Malware Distribution:** Visitors prompted to download executable file
 4. **Traffic Redirection:** Users redirected to greatrecipesforme.com
@@ -153,17 +154,17 @@ A former employee executed a brute force attack against yummyrecipesforme.com, g
 
 **Attack Progression:**
 1. Browser initiates DNS request for yummyrecipesforme.com
-2. HTTP connection established to compromised website
+2. HTTP connection established to the compromised website
 3. Malicious file downloaded via HTTP
 4. Browser redirected to greatrecipesforme.com via new DNS/HTTP requests
 
 ### Security Incident Report: Brute Force Attack & Malware Distribution
 
 **Section 1: Network Protocol Analysis**
-The primary protocol involved in this incident is HTTP (Hypertext Transfer Protocol). The malicious file was transported to users' computers using HTTP at the application layer. Additionally, DNS protocol was used for domain resolution throughout the attack sequence.
+The primary protocol involved in this incident is HTTP (Hypertext Transfer Protocol). The malicious file was transported to users' computers using HTTP at the application layer. Additionally, the DNS protocol was used for domain resolution throughout the attack sequence.
 
 **Section 2: Incident Documentation**
-Several customers contacted the helpdesk reporting prompts to download files for "free recipes" when visiting the website. After running the files, their computers operated slowly and browsers redirected to a different site.
+Several customers contacted the helpdesk, reporting prompts to download files for "free recipes" when visiting the website. After running the files, their computers operated slowly, and browsers redirected to a different site.
 
 Investigation using a sandbox environment and tcpdump revealed:
 - The compromised website prompted downloads of malicious files disguised as browser updates
@@ -186,7 +187,7 @@ Investigation using a sandbox environment and tcpdump revealed:
 **Note: This is an educational simulation designed to demonstrate network hardening and vulnerability assessment skills**
 
 ### Scenario
-A social media organization experienced a major data breach, compromising customer personal information. As a security analyst, I conducted a comprehensive network security assessment to identify vulnerabilities and develop recommendations for hardening to prevent future incidents.
+A social media organization experienced a significant data breach, compromising customer personal information. As a security analyst, I conducted a comprehensive network security assessment to identify vulnerabilities and develop recommendations for hardening to prevent future incidents.
 
 <details>
 <summary><strong>View Identified Vulnerabilities</strong></summary>
@@ -210,7 +211,7 @@ Three hardening tools the organization can implement to address the vulnerabilit
 3. **Performing Regular Firewall Maintenance**
 
 **Tool Descriptions:**
-- **MFA** requires users to verify credentials through multiple methods (fingerprint scans, ID cards, PIN numbers, passwords) before accessing applications
+- **MFA** requires users to verify credentials through multiple methods (fingerprint scans, ID cards, PINs, passwords) before accessing applications
 - **Password policies** include rules for password length, acceptable characters, sharing restrictions, and account lockout after unsuccessful login attempts  
 - **Firewall maintenance** involves regularly checking and updating security configurations to stay ahead of potential threats
 
@@ -220,7 +221,7 @@ Three hardening tools the organization can implement to address the vulnerabilit
 MFA adds a security layer beyond passwords, reducing the likelihood of successful brute force attacks since multiple authentication methods are required. It also discourages password sharing since recipients would need additional authentication factors, making shared passwords less useful.
 
 **Password Policy Enforcement:**
-Strong password policies make it increasingly challenging for malicious actors to access the network. Account suspension after a certain number of failed login attempts prevents brute force attacks. Requirements for password complexity, frequent updates, and preventing password reuse help prevent network infiltration.
+Strong password policies make it increasingly challenging for malicious actors to access the network. Account suspension after a certain number of failed login attempts prevents brute force attacks. Requirements for password complexity, frequent updates, and preventing password reuse help avoid network infiltration.
 
 **Firewall Maintenance Strategy:**
 Regular firewall maintenance ensures rules reflect current security standards for allowed/denied traffic. Suspicious traffic sources should be added to deny lists, and rules must be updated after security events. This protects against various DoS and DDoS attacks by controlling network access points.
@@ -235,28 +236,44 @@ Regular firewall maintenance ensures rules reflect current security standards fo
 
 [🔝 Back to Top](#table-of-contents)
 
-## Case Study 5: NIST Cybersecurity Framework Incident Response
-**Note: This is an educational simulation designed to demonstrate NIST CSF framework application skills**
+## Case Study 5: NIST Cybersecurity Framework Implementation
+**Note: This is an educational simulation designed to demonstrate NIST CSF framework application and strategic security planning skills**
 
 ### Scenario
-A company experienced a complete network service outage when all systems stopped responding. As part of the cybersecurity team, I applied the NIST Cybersecurity Framework to systematically analyze, respond to, and recover from the incident.
+A multimedia company offering web design services experienced a complete network service outage lasting two hours when all systems stopped responding due to a DDoS attack. As part of the cybersecurity team, I applied the NIST Cybersecurity Framework to systematically analyze, respond to, and develop strategic improvements following the incident.
+
+### Incident Details
+The organization's network services suddenly stopped responding due to an incoming flood of ICMP packets through an unconfigured firewall. This vulnerability allowed a malicious actor to overwhelm the company's network through a distributed denial of service (DDoS) attack, affecting all internal network traffic and preventing access to network resources.
 
 ### NIST CSF Framework Analysis
 
-| **Framework Component** | **Analysis & Actions** |
+| **Framework Component** | **Analysis & Strategic Actions** |
 |---|---|
-| **Identify** | A malicious actor targeted the company with an ICMP flood attack. The entire internal network was affected. All critical network resources needed to be secured and restored to a functioning state. |
-| **Protect** | Implemented new firewall rule to limit incoming ICMP packet rates and deployed IDS/IPS system to filter ICMP traffic based on suspicious characteristics. |
-| **Detect** | Configured source IP address verification on firewall to check for spoofed IP addresses on incoming ICMP packets and implemented network monitoring software to detect abnormal traffic patterns. |
-| **Respond** | Established procedures to isolate affected systems, restore critical services, analyze network logs for suspicious activity, and report incidents to upper management and legal authorities when applicable. |
-| **Recover** | Restored network services by blocking external ICMP floods at firewall, stopping non-critical services to reduce internal traffic, prioritizing critical service restoration, and bringing non-critical systems online after attack subsided. |
+| **Identify** | Conducted comprehensive audit of network infrastructure, firewall configurations, and access controls. Identified unconfigured firewall as primary vulnerability allowing ICMP flood attacks. The entire internal network was affected, requiring identification of all critical network resources needing protection. |
+| **Protect** | Implemented new firewall rule to limit incoming ICMP packet rates, configured source IP address verification on firewall to check for spoofed IP addresses, deployed IDS/IPS system to filter ICMP traffic based on suspicious characteristics, and installed network monitoring software. |
+| **Detect** | Configured source IP address verification on firewall to check for spoofed IP addresses on incoming ICMP packets, implemented network monitoring software to detect abnormal traffic patterns, and established baseline metrics for normal network behavior to identify future anomalies. |
+| **Respond** | Established procedures to isolate affected systems, restore critical services first, analyze network logs for suspicious activity, and report incidents to upper management and legal authorities when applicable. Developed communication protocols for stakeholders during incidents. |
+| **Recover** | Restored network services by blocking external ICMP floods at firewall, stopping non-critical services to reduce internal traffic, prioritizing critical service restoration, and bringing non-critical systems online after attack subsided. Established recovery time objectives for different service levels. |
 
-### Incident Summary
-The company experienced a security event when all network services suddenly stopped responding. The cybersecurity team found the disruption was caused by a distributed denial of services (DDoS) attack through a flood of incoming ICMP packets. The team responded by blocking the attack and stopping all non-critical network services, so that critical network services could be restored.
+### Strategic Security Improvements
 
-### Key Framework Applications
-- **Systematic Response:** Applied structured NIST methodology for comprehensive incident handling
-- **Risk Prioritization:** Identified critical vs. non-critical systems for recovery sequencing
+**Immediate Response Actions:**
+- Blocked incoming ICMP packets to stop the attack
+- Took all non-critical network services offline  
+- Restored critical network services systematically
+- Implemented emergency communication procedures
+
+**Long-term Strategic Improvements:**
+- New firewall rules limiting ICMP packet rates
+- Source IP address verification for incoming traffic
+- IDS/IPS system deployment for traffic filtering
+- Continuous network monitoring software
+- Regular firewall configuration audits
+- Staff training on DDoS attack recognition
+
+### Business Impact Considerations
+- **Service Availability:** 2-hour outage affected client services and revenue
+- **Risk Prioritization:** Identified critical vs. non-critical systems for recovery sequencing  
 - **Preventive Controls:** Implemented multiple protection layers (firewall rules, IDS/IPS)
 - **Continuous Monitoring:** Established ongoing detection capabilities for future threats
 - **Business Continuity:** Maintained focus on restoring operations while securing infrastructure
@@ -280,7 +297,7 @@ The company experienced a security event when all network services suddenly stop
 **Core Competencies Demonstrated:**
 - **Comprehensive Security Analysis:** Ability to identify, analyze, and respond to different types of security incidents across the entire attack lifecycle
 - **Technical Proficiency:** Practical application across multiple protocol layers and attack methodologies 
-- **Framework Expertise:** Industry-standard incident response using NIST Cybersecurity Framework
+- **Framework Expertise:** Industry-standard incident response using NIST Cybersecurity Framework for both analysis and strategic planning
 - **Strategic Security Thinking:** Understanding how technical issues affect operations and developing security strategies aligned with organizational needs
 
 **Cybersecurity Skillset Progression:**
@@ -289,12 +306,12 @@ These five case studies demonstrate a complete cybersecurity analyst competency 
 2. **Attack Detection & Response:** Real-time DoS attack identification and mitigation
 3. **Complex Incident Response:** Multi-vector attacks involving multiple stages and protocols
 4. **Proactive Security Strategy:** Vulnerability assessment and preventive hardening implementation
-5. **Framework-Based Response:** Structured incident response using industry standards
+5. **Framework-Based Strategic Planning:** Structured incident response and comprehensive security improvement using industry standards
 
 **Professional Readiness:**
 This portfolio showcases the analytical thinking, technical competency, incident response capabilities, framework implementation skills, and strategic security planning abilities essential for cybersecurity roles. The progression from reactive incident analysis to proactive security assessment and structured framework application demonstrates readiness for diverse cybersecurity challenges in enterprise environments.
 
-The combination of technical analysis skills with industry-standard frameworks positions this portfolio to meet the expectations of modern cybersecurity positions requiring both hands-on technical capabilities and structured business-focused incident response.
+The combination of technical analysis skills with industry-standard frameworks positions this portfolio to meet the expectations of modern cybersecurity positions requiring both hands-on technical capabilities and structured business-focused incident response and strategic planning.
 
 [🔝 Back to Top](#table-of-contents)
 
