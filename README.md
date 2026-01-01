@@ -9,7 +9,7 @@
 - [Portfolio Quick Reference](#-portfolio-quick-reference)
 - [Skills Demonstrated](#skills-demonstrated)
 - [Case Study 1: DNS Server Failure Investigation](#-case-study-1-dns-server-failure-investigation)
-- [Case Study 2: SYN Flood DoS Attack Analysis](#-case-study-2-syn-flood-dos-attack-analysis)
+- [Case Study 2: SYN Flood DoS Attack Analysis](#️-case-study-2-syn-flood-dos-attack-analysis)
   - [Incident Report: SYN Flood DoS Attack](#incident-report-syn-flood-dos-attack)
   - [Response Actions](#immediate-response-actions-taken)
 - [Case Study 3: Brute Force Attack & Malware Distribution](#-case-study-3-brute-force-attack--malware-distribution)
