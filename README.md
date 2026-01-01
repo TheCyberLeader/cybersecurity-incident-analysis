@@ -1,19 +1,25 @@
 # Cybersecurity Incident Analysis 📓
 
+![Status](https://img.shields.io/badge/Status-Complete-success)
+![Projects](https://img.shields.io/badge/Case%20Studies-5-blue)
+![Frameworks](https://img.shields.io/badge/Framework-NIST%20CSF-informational)
+
 ## Table of Contents
 - [Overview](#overview)
+- [Portfolio Quick Reference](#-portfolio-quick-reference)
 - [Skills Demonstrated](#skills-demonstrated)
-- [Case Study 1: DNS Server Failure Investigation](#case-study-1-dns-server-failure-investigation)
-- [Case Study 2: SYN Flood DoS Attack Analysis](#case-study-2-syn-flood-dos-attack-analysis)
+- [Case Study 1: DNS Server Failure Investigation](#-case-study-1-dns-server-failure-investigation)
+- [Case Study 2: SYN Flood DoS Attack Analysis](#-case-study-2-syn-flood-dos-attack-analysis)
   - [Incident Report: SYN Flood DoS Attack](#incident-report-syn-flood-dos-attack)
   - [Response Actions](#immediate-response-actions-taken)
-- [Case Study 3: Brute Force Attack & Malware Distribution](#case-study-3-brute-force-attack--malware-distribution)
+- [Case Study 3: Brute Force Attack & Malware Distribution](#-case-study-3-brute-force-attack--malware-distribution)
   - [Security Incident Report](#security-incident-report-brute-force-attack--malware-distribution)
-- [Case Study 4: Network Security Risk Assessment & Hardening](#case-study-4-network-security-risk-assessment--hardening)
+- [Case Study 4: Network Security Risk Assessment & Hardening](#-case-study-4-network-security-risk-assessment--hardening)
   - [Security Risk Assessment Report](#security-risk-assessment-report)
-- [Case Study 5: NIST Cybersecurity Framework Implementation](#case-study-5-nist-cybersecurity-framework-implementation)
+- [Case Study 5: NIST Cybersecurity Framework Implementation](#-case-study-5-nist-cybersecurity-framework-implementation)
   - [NIST CSF Framework Analysis](#nist-csf-framework-analysis)
   - [Strategic Security Improvements](#strategic-security-improvements)
+- [Skills & Tools Demonstrated](#-skills--tools-demonstrated)
 - [Technical Skills Summary](#technical-skills-demonstrated-across-case-studies)
 - [Professional Impact](#key-learning-outcomes--professional-impact)
 
@@ -21,6 +27,19 @@
 
 ## Overview
 This showcases cybersecurity incident response and network traffic analysis skills through **educational case studies and simulated scenarios**. Each analysis demonstrates practical application of network protocol knowledge, threat detection, and professional incident documentation.
+
+---
+
+## 📊 Portfolio Quick Reference
+| Metric | Value |
+|--------|-------|
+| **Total Case Studies** | 5 |
+| **Attack Types Analyzed** | DNS Failure, DoS, Brute Force, DDoS |
+| **Frameworks Applied** | NIST CSF |
+| **Tools Used** | tcpdump, Wireshark, Sandbox Analysis |
+| **Key Skills** | Incident Response, Risk Assessment, Network Hardening |
+
+---
 
 ## Skills Demonstrated
 - Network traffic analysis using tcpdump and Wireshark
@@ -46,7 +65,7 @@ This showcases cybersecurity incident response and network traffic analysis skil
 
 ---
 
-## Case Study 1: DNS Server Failure Investigation
+## 🔍 Case Study 1: DNS Server Failure Investigation
 **Note: This is an educational simulation designed to demonstrate network analysis skills**
 
 ### Scenario
@@ -54,6 +73,7 @@ Multiple customers reported an inability to access www.yummyrecipesforme.com, re
 
 <details>
 <summary><strong>View tcpdump Log Data</strong></summary>
+```
 13:24:32.192571 IP 192.51.100.15.52444 > 203.0.113.2.domain: 35084+ A?
 yummyrecipesforme.com. (24)
 13:24:36.098564 IP 203.0.113.2 > 192.51.100.15: ICMP 203.0.113.2
@@ -66,6 +86,7 @@ udp port 53 unreachable length 320
 yummyrecipesforme.com. (24)
 13:28:50.022967 IP 203.0.113.2 > 192.51.100.15: ICMP 203.0.113.2
 udp port 53 unreachable length 150
+```
 </details>
 
 ### Technical Analysis
@@ -85,7 +106,7 @@ udp port 53 unreachable length 150
 
 ---
 
-## Case Study 2: SYN Flood DoS Attack Analysis
+## 🛡️ Case Study 2: SYN Flood DoS Attack Analysis
 **Note: This is an educational simulation designed to demonstrate DoS attack analysis skills**
 
 ### Scenario
@@ -128,7 +149,7 @@ In a SYN flood attack, the malicious actor sends numerous SYN packets without co
 
 ---
 
-## Case Study 3: Brute Force Attack & Malware Distribution
+## 🚨 Case Study 3: Brute Force Attack & Malware Distribution
 **Note: This is an educational simulation designed to demonstrate incident response and malware analysis skills**
 
 ### Scenario
@@ -183,7 +204,11 @@ Investigation using a sandbox environment and tcpdump revealed:
 - Monitor and log administrative access attempts
 - Regular security code reviews to prevent malicious injections
 
-## Case Study 4: Network Security Risk Assessment & Hardening
+[🔝 Back to Top](#table-of-contents)
+
+---
+
+## 🔒 Case Study 4: Network Security Risk Assessment & Hardening
 **Note: This is an educational simulation designed to demonstrate network hardening and vulnerability assessment skills**
 
 ### Scenario
@@ -236,7 +261,9 @@ Regular firewall maintenance ensures rules reflect current security standards fo
 
 [🔝 Back to Top](#table-of-contents)
 
-## Case Study 5: NIST Cybersecurity Framework Implementation
+---
+
+## 📋 Case Study 5: NIST Cybersecurity Framework Implementation
 **Note: This is an educational simulation designed to demonstrate NIST CSF framework application and strategic security planning skills**
 
 ### Scenario
@@ -277,6 +304,35 @@ The organization's network services suddenly stopped responding due to an incomi
 - **Preventive Controls:** Implemented multiple protection layers (firewall rules, IDS/IPS)
 - **Continuous Monitoring:** Established ongoing detection capabilities for future threats
 - **Business Continuity:** Maintained focus on restoring operations while securing infrastructure
+
+[🔝 Back to Top](#table-of-contents)
+
+---
+
+## 🎯 Skills & Tools Demonstrated
+
+### Analysis Tools
+![Wireshark](https://img.shields.io/badge/Wireshark-1679A7?style=flat&logo=wireshark&logoColor=white)
+![tcpdump](https://img.shields.io/badge/tcpdump-000000?style=flat&logo=linux&logoColor=white)
+![Sandbox Analysis](https://img.shields.io/badge/Sandbox_Analysis-FF6B6B?style=flat&logo=security&logoColor=white)
+
+### Frameworks & Standards
+![NIST CSF](https://img.shields.io/badge/NIST_CSF-000000?style=flat&logo=nist&logoColor=white)
+![NIST RMF](https://img.shields.io/badge/NIST_RMF-0066CC?style=flat&logo=nist&logoColor=white)
+
+### Protocols Analyzed
+![DNS](https://img.shields.io/badge/DNS-0066CC?style=flat)
+![HTTP](https://img.shields.io/badge/HTTP-005C84?style=flat)
+![TCP](https://img.shields.io/badge/TCP-FF6B6B?style=flat)
+![UDP](https://img.shields.io/badge/UDP-4ECDC4?style=flat)
+![ICMP](https://img.shields.io/badge/ICMP-95E1D3?style=flat)
+
+### Attack Types Investigated
+![DoS/DDoS](https://img.shields.io/badge/DoS%2FDDoS-D00000?style=flat)
+![Brute Force](https://img.shields.io/badge/Brute_Force-FF4500?style=flat)
+![Malware](https://img.shields.io/badge/Malware_Distribution-8B0000?style=flat)
+![SYN Flood](https://img.shields.io/badge/SYN_Flood-DC143C?style=flat)
+
 ---
 
 ## Technical Skills Demonstrated Across Case Studies
@@ -291,6 +347,8 @@ The organization's network services suddenly stopped responding due to an incomi
 | **Framework Implementation** | NIST Cybersecurity Framework application, structured incident response methodology, business continuity planning |
 | **Incident Response** | Systematic investigation, emergency mitigation, professional documentation, multi-stage attack reconstruction, cross-functional coordination |
 | **Technical Communication** | Professional reporting, actionable recommendations, evidence-based analysis, stakeholder communication |
+
+---
 
 ## Key Learning Outcomes & Professional Impact
 
@@ -313,6 +371,9 @@ This portfolio showcases the analytical thinking, technical competency, incident
 
 The combination of technical analysis skills with industry-standard frameworks positions this portfolio to meet the expectations of modern cybersecurity positions requiring both hands-on technical capabilities and structured business-focused incident response and strategic planning.
 
-[🔝 Back to Top](#table-of-contents)
+---
+
+## 🔗 Navigation
+[⬅️ Back to Portfolio Home](https://github.com/TheCyberLeader) | [📧 Contact](mailto:m@riegrc.com) | [💼 LinkedIn](https://linkedin.com/in/mariezw)
 
 ---
