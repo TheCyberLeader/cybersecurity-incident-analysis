@@ -373,6 +373,8 @@ The combination of technical analysis skills with industry-standard frameworks p
 
 ---
 
+## 🔗 Navigation
+
 [⬅️ Back to Portfolio Home](https://github.com/TheCyberLeader) | [📂 View All Projects](https://github.com/TheCyberLeader/hands-on-cyber-leadership) | [📧 Contact](mailto:m@riegrc.com) | [💼 LinkedIn](https://linkedin.com/in/mariezw)
 
 ---
